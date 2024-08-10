@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32901.215
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "oop-perpustakaan", "oop-perpustakaan.csproj", "{B1167DB4-3760-418B-B2FB-934D961703EB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B1167DB4-3760-418B-B2FB-934D961703EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1167DB4-3760-418B-B2FB-934D961703EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1167DB4-3760-418B-B2FB-934D961703EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1167DB4-3760-418B-B2FB-934D961703EB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1D8C10F1-BA3A-4BCE-BBEC-9E2CCE9B14C8}
+	EndGlobalSection
+EndGlobal
