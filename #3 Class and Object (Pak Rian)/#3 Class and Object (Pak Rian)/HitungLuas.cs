@@ -8,7 +8,7 @@ namespace _3_Class_and_Object__Pak_Rian_
 {
     public class HitungLuas
     {
-        double pi = 22/7;
+        double pi = 3.14;
         double hasil;
         public double Bola (double jari)
         {
