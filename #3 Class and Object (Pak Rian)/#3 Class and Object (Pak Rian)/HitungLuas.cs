@@ -6,13 +6,14 @@ using System.Threading.Tasks;
 
 namespace _3_Class_and_Object__Pak_Rian_
 {
-    internal class Program
+    public class HitungLuas
     {
-        static void Main(string[] args)
+        double pi = 22/7;
+        double hasil;
+        public double Bola (double jari)
         {
-            Identitas identitas = new Identitas();
-            identitas.displayIdentitas();
-            Console.ReadLine();
+            hasil = 4 * pi * Math.Pow(jari, 2);
+            return (hasil);
         }
     }
 }
