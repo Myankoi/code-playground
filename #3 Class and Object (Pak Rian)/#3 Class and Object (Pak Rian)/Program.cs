@@ -10,6 +10,8 @@ namespace _3_Class_and_Object__Pak_Rian_
     {
         static void Main(string[] args)
         {
+            Identitas identitas = new Identitas();
+            identitas.displayIdentitas();
         }
     }
 }

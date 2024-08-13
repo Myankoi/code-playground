@@ -43,8 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="HitungLuas.cs" />
+    <Compile Include="HitungVolume.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Identitas.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
