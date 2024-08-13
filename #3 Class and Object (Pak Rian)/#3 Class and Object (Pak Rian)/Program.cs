@@ -10,6 +10,7 @@ namespace _3_Class_and_Object__Pak_Rian_
     {
         static void Main(string[] args)
         {
+            // Start disini Pak Rian ❤
             Identitas identitas = new Identitas();
             identitas.displayIdentitas();
             Console.ReadLine();

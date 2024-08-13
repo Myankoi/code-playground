@@ -8,12 +8,15 @@ namespace _3_Class_and_Object__Pak_Rian_
 {
     public class HitungLuas
     {
-        double pi = 3.14;
-        double hasil;
+        double hasilSementara;
+        double hasilAkhir;
+
+        // ini method yang nangkep parameter jari ❤
         public double Bola (double jari)
         {
-            hasil = 4 * pi * Math.Pow(jari, 2);
-            return (hasil);
+            hasilSementara = 4 * Math.PI * Math.Pow(jari, 2);
+            hasilAkhir = Math.Round(hasilSementara, 2);
+            return (hasilAkhir);
         }
     }
 }
