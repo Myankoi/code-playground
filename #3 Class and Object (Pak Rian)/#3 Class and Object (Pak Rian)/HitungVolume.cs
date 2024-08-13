@@ -16,7 +16,7 @@ namespace _3_Class_and_Object__Pak_Rian_
             hasilSementara = ( (4/3) * Math.PI * Math.Pow(jari, 3) );
             hasilAkhir = Math.Round(hasilSementara, 2);
 
-            Console.WriteLine($"Bola dengan jari-jari {jari} m, maka volumenya adalah {hasilAkhir} m^3");
+            Console.WriteLine($"Bola dengan jari-jari {jari} m, memiliki volume = {hasilAkhir} m^3");
         }
     }
 }

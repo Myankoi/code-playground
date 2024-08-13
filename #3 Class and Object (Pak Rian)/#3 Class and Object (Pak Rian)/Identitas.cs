@@ -44,7 +44,7 @@ namespace _3_Class_and_Object__Pak_Rian_
                         Console.Clear();
                         tanyaJari();
                         hasil = hitungLuas.Bola(jari);
-                        Console.WriteLine($"Bola dengan jari-jari {jari} m, maka luasnya adalah {hasil} m^2");
+                        Console.WriteLine($"Bola dengan jari-jari {jari} m, memiliki luas = {hasil} m^2");
                     }
                     else if (pilihan == 2)
                     {
@@ -67,7 +67,7 @@ namespace _3_Class_and_Object__Pak_Rian_
         {
             while (!isBenar)
             {
-                Console.WriteLine("\nMasukan jari-jari bola :");
+                Console.WriteLine("\nBerapa jari-jari bola?");
 
                 input = Console.ReadLine();
 
