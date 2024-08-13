@@ -8,7 +8,7 @@ namespace _3_Class_and_Object__Pak_Rian_
 {
     public class Identitas
     {
-        // ini kumpulan objek sama variabel ❤
+        // ini kumpulan objek sama prop-nya ❤
         HitungLuas hitungLuas = new HitungLuas();
         HitungVolume hitungVolume = new HitungVolume();
 
