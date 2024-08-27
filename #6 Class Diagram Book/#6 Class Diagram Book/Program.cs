@@ -30,7 +30,7 @@ namespace _6_Class_Diagram_Book
             Console.WriteLine("name is: " + b1.getName());
             Console.WriteLine("price is: " + b1.getPrice());
             Console.WriteLine("qty is: " + b1.getQty());
-            Console.WriteLine("author is: " + b1.getAuthor());  // Author's toString()
+            Console.WriteLine("author is: " + b1.getAuthor().toString());  // Author's toString()
             Console.WriteLine("author's name: " + b1.getAuthorName());
             Console.WriteLine("author's name: " + b1.getAuthor().getName());
             Console.WriteLine("author's email: " + b1.getAuthor().getEmail());
