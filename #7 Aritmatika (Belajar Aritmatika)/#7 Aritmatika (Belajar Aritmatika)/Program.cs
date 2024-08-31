@@ -18,7 +18,7 @@ namespace _7_Aritmatika__Belajar_Aritmatika_
             int num1 = userService.numberInput(1);
             int num2 = userService.numberInput(2);
 
-            Console.WriteLine(".: Perhitungan Aritmatika Sederhana --:.");
+            Console.WriteLine(".: -- Perhitungan Aritmatika Sederhana --:.");
 
             Console.WriteLine(">> Bilangan Pertama          :  " + num1);
             Console.WriteLine(">> Bilangan Kedua            :  " + num2);
