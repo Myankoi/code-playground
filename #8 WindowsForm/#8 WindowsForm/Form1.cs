@@ -25,5 +25,11 @@ namespace _8_WindowsForm
             this.Hide();
             form2.Show();
         }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            tbUsername.Text = "Anjay";
+            tbPassword.Text = "Anjay";
+        }
     }
 }
