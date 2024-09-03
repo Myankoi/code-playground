@@ -75,6 +75,7 @@
             Controls.Add(welcomeText);
             Controls.Add(pictureBox1);
             Name = "Form3";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Form3";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
