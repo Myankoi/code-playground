@@ -28,8 +28,17 @@ namespace _8_WindowsForm
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            tbUsername.Text = "Anjay";
-            tbPassword.Text = "Anjay";
+            if (tbUsername.Text == "Anjay" && tbPassword.Text == "Anjay")
+            {
+                Form3 form3 = new Form3(this, tbUsername.Text);
+                this.Hide();
+                form3.Show();
+            }
+            else
+            {
+                MessageBox.Show("Username or Password is incorrect!", "Cihuy");
+            }
+        
         }
     }
 }
