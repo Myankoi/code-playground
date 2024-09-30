@@ -9,6 +9,7 @@ namespace _10_Array_in_C_
     internal class Program
     {
         static string[] buah = new string[] {};
+        static int[] angka = new int[] { };
         static void Main(string[] args)
         {
             /*string[] buah = { "apel", "pisang", "jeruk", "anggur", "kiwi" };
@@ -45,26 +46,30 @@ namespace _10_Array_in_C_
 
         static void inputData()
         {
-            Console.Write("Jumlah data buah yang ingin dimasukkan : ");
+            Console.Write("Jumlah data angka yang ingin dimasukkan : ");
             int indexData = Convert.ToInt32(Console.ReadLine());
 
-            buah = new string[indexData];
+            angka = new int[indexData];
 
-            for (int i = 0; i < buah.Length; i++)
+            for (int i = 0; i < angka.Length; i++)
             {
-                Console.Write($"Masukan buah ke-{i + 1} : ");
-                buah[i] = Console.ReadLine();
+                Console.Write($"Masukan angka ke-{i + 1} : ");
+                angka[i] = int.Parse(Console.ReadLine());
             }
         }
 
         static void outputData()
         {
-
-            Console.WriteLine("Berikut data buah Anda : ");
-            for (int i = 0; i < buah.Length; i++)
+            Console.WriteLine("\nBerikut data angka Anda : ");
+            for (int i = 0; i < angka.Length; i++)
             {
-                Console.WriteLine($"\nData buah ke {i + 1} = {buah[i]}");
+                Console.WriteLine($"Data angka ke {i + 1} = {angka[i]}");
             }
+
+            Console.WriteLine($"\nNilai Max dalam array Angka : {angka.Max()}");
+            Console.WriteLine($"Nilai Min dalam array Angka : {angka.Min()}");
+            Console.WriteLine($"Total nilai dalam array Angka : {angka.Sum()}");
+            Console.WriteLine($"Rata-rata nilai dalam array Angka : {angka.Average()}");
         }
     }
 }
