@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -41,13 +42,29 @@ namespace _10_Array_in_C_
             inputData();
             outputData();
 
+            /*Console.WriteLine($"\nNilai Max dalam array Angka : {angka.Max()}");
+            Console.WriteLine($"Nilai Min dalam array Angka : {angka.Min()}");
+            Console.WriteLine($"Total nilai dalam array Angka : {angka.Sum()}");
+            Console.WriteLine($"Rata-rata nilai dalam array Angka : {angka.Average()}\n");*/
+
+            Console.WriteLine($"Urutan angka ascending : ");
+            Array.Sort(angka);
+            outputData();
+            
+            Console.WriteLine($"\nUrutan angka ascending : ");
+            Array.Reverse(angka);
+            Array.ForEach(angka, n => Console.WriteLine(n));
+            Array.BinarySearch(angka, 5);
+
+            int[] result = Array.FindAll(angka, n => n == 12);
+
             Console.ReadLine();
         }
 
         static void inputData()
         {
             Console.Write("Jumlah data angka yang ingin dimasukkan : ");
-            int indexData = Convert.ToInt32(Console.ReadLine());
+            int indexData = int.Parse(Console.ReadLine());
 
             angka = new int[indexData];
 
@@ -65,11 +82,6 @@ namespace _10_Array_in_C_
             {
                 Console.WriteLine($"Data angka ke {i + 1} = {angka[i]}");
             }
-
-            Console.WriteLine($"\nNilai Max dalam array Angka : {angka.Max()}");
-            Console.WriteLine($"Nilai Min dalam array Angka : {angka.Min()}");
-            Console.WriteLine($"Total nilai dalam array Angka : {angka.Sum()}");
-            Console.WriteLine($"Rata-rata nilai dalam array Angka : {angka.Average()}");
         }
     }
 }
