@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.gbRegister = new System.Windows.Forms.GroupBox();
-            this.listPosition = new System.Windows.Forms.DomainUpDown();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.tbHandphoneNumber = new System.Windows.Forms.TextBox();
@@ -56,6 +55,7 @@
             this.tbLoginPassword = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.listPosition = new System.Windows.Forms.ComboBox();
             this.gbRegister.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbJenisKelamin)).BeginInit();
             this.gbLogin.SuspendLayout();
@@ -89,14 +89,6 @@
             this.gbRegister.TabStop = false;
             this.gbRegister.Text = "Registrasi User";
             // 
-            // listPosition
-            // 
-            this.listPosition.Location = new System.Drawing.Point(133, 301);
-            this.listPosition.Name = "listPosition";
-            this.listPosition.Size = new System.Drawing.Size(259, 22);
-            this.listPosition.TabIndex = 31;
-            this.listPosition.Text = "domainUpDown1";
-            // 
             // btnSubmit
             // 
             this.btnSubmit.Location = new System.Drawing.Point(299, 332);
@@ -105,6 +97,7 @@
             this.btnSubmit.TabIndex = 12;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = true;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // label10
             // 
@@ -290,6 +283,7 @@
             this.btnLogin.TabIndex = 10;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // cbShowPassword
             // 
@@ -335,6 +329,13 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "Username";
             // 
+            // listPosition
+            // 
+            this.listPosition.Location = new System.Drawing.Point(133, 298);
+            this.listPosition.Name = "listPosition";
+            this.listPosition.Size = new System.Drawing.Size(259, 24);
+            this.listPosition.TabIndex = 32;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -342,6 +343,8 @@
             this.ClientSize = new System.Drawing.Size(802, 423);
             this.Controls.Add(this.gbLogin);
             this.Controls.Add(this.gbRegister);
+            this.MaximumSize = new System.Drawing.Size(820, 470);
+            this.MinimumSize = new System.Drawing.Size(300, 470);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
@@ -383,7 +386,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox tbRegisterPassword;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.DomainUpDown listPosition;
+        private System.Windows.Forms.ComboBox listPosition;
     }
 }
 
