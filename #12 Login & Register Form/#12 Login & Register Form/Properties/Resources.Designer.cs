@@ -89,5 +89,15 @@ namespace _12_Login___Register_Form.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WhatsApp_Image_2024_10_05_at_06_17_05 {
+            get {
+                object obj = ResourceManager.GetObject("WhatsApp Image 2024-10-05 at 06.17.05", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

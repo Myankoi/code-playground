@@ -35,7 +35,7 @@ namespace _12_Login___Register_Form
             } else
             {
                 gbRegister.Visible = false;
-                 this.Width = 300;
+                this.Width = 300;
             }
         }
 
@@ -83,7 +83,8 @@ namespace _12_Login___Register_Form
 
             if (tbRegisterPassword.Text != tbRegisterVerifyPassword.Text)
             {
-                MessageBox.Show("Verify Password is Incorrect!");
+                MessageBox.Show("Verify Password Is Not Same!");
+                return;
             }
 
             if (listPosition.Text == string.Empty)
@@ -108,10 +109,12 @@ namespace _12_Login___Register_Form
                 tbRegisterVerifyPassword.Clear();
                 tbHandphoneNumber.Clear();
                 listPosition.SelectedIndex = 2;
+                gbRegister.Visible = false;
+                this.Width = 300;
                 return;
             } else
             {
-                MessageBox.Show("Registration Failed!", "Registration");
+                MessageBox.Show("Username Is Taken!", "Registration");
                 return;
             }
         }
@@ -131,6 +134,8 @@ namespace _12_Login___Register_Form
                 Form2 frm2 = new Form2(userPosition, this);
                 frm2.Show();
                 this.Hide();
+                tbLoginUsername.Clear();
+                tbLoginPassword.Clear();
                 return;
             } else
             {

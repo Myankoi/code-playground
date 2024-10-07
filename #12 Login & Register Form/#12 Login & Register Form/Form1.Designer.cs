@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.gbRegister = new System.Windows.Forms.GroupBox();
+            this.listPosition = new System.Windows.Forms.ComboBox();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.tbHandphoneNumber = new System.Windows.Forms.TextBox();
@@ -39,7 +40,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.tbRegisterPassword = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.pbJenisKelamin = new System.Windows.Forms.PictureBox();
             this.rbFemale = new System.Windows.Forms.RadioButton();
             this.rbMale = new System.Windows.Forms.RadioButton();
             this.label5 = new System.Windows.Forms.Label();
@@ -55,10 +55,12 @@
             this.tbLoginPassword = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.listPosition = new System.Windows.Forms.ComboBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbJenisKelamin = new System.Windows.Forms.PictureBox();
             this.gbRegister.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbJenisKelamin)).BeginInit();
             this.gbLogin.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbJenisKelamin)).BeginInit();
             this.SuspendLayout();
             // 
             // gbRegister
@@ -89,8 +91,16 @@
             this.gbRegister.TabStop = false;
             this.gbRegister.Text = "Registrasi User";
             // 
+            // listPosition
+            // 
+            this.listPosition.Location = new System.Drawing.Point(133, 298);
+            this.listPosition.Name = "listPosition";
+            this.listPosition.Size = new System.Drawing.Size(259, 24);
+            this.listPosition.TabIndex = 32;
+            // 
             // btnSubmit
             // 
+            this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSubmit.Location = new System.Drawing.Point(299, 332);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(93, 28);
@@ -173,16 +183,6 @@
             this.label7.Size = new System.Drawing.Size(67, 16);
             this.label7.TabIndex = 21;
             this.label7.Text = "Password";
-            // 
-            // pbJenisKelamin
-            // 
-            this.pbJenisKelamin.Image = global::_12_Login___Register_Form.Properties.Resources.user;
-            this.pbJenisKelamin.Location = new System.Drawing.Point(311, 29);
-            this.pbJenisKelamin.Name = "pbJenisKelamin";
-            this.pbJenisKelamin.Size = new System.Drawing.Size(81, 112);
-            this.pbJenisKelamin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbJenisKelamin.TabIndex = 19;
-            this.pbJenisKelamin.TabStop = false;
             // 
             // rbFemale
             // 
@@ -267,6 +267,7 @@
             // 
             // btnRegister
             // 
+            this.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegister.Location = new System.Drawing.Point(203, 123);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(93, 28);
@@ -277,6 +278,7 @@
             // 
             // btnLogin
             // 
+            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Location = new System.Drawing.Point(99, 123);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(85, 28);
@@ -329,18 +331,33 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "Username";
             // 
-            // listPosition
+            // pictureBox1
             // 
-            this.listPosition.Location = new System.Drawing.Point(133, 298);
-            this.listPosition.Name = "listPosition";
-            this.listPosition.Size = new System.Drawing.Size(259, 24);
-            this.listPosition.TabIndex = 32;
+            this.pictureBox1.Image = global::_12_Login___Register_Form.Properties.Resources.WhatsApp_Image_2024_10_05_at_06_17_05;
+            this.pictureBox1.Location = new System.Drawing.Point(87, 40);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(190, 190);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pbJenisKelamin
+            // 
+            this.pbJenisKelamin.Image = global::_12_Login___Register_Form.Properties.Resources.user;
+            this.pbJenisKelamin.Location = new System.Drawing.Point(311, 29);
+            this.pbJenisKelamin.Name = "pbJenisKelamin";
+            this.pbJenisKelamin.Size = new System.Drawing.Size(81, 112);
+            this.pbJenisKelamin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbJenisKelamin.TabIndex = 19;
+            this.pbJenisKelamin.TabStop = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(802, 423);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.gbLogin);
             this.Controls.Add(this.gbRegister);
             this.MaximumSize = new System.Drawing.Size(820, 470);
@@ -350,9 +367,10 @@
             this.Text = "Login";
             this.gbRegister.ResumeLayout(false);
             this.gbRegister.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbJenisKelamin)).EndInit();
             this.gbLogin.ResumeLayout(false);
             this.gbLogin.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbJenisKelamin)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -387,6 +405,7 @@
         private System.Windows.Forms.TextBox tbRegisterPassword;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox listPosition;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
