@@ -1,6 +1,6 @@
 ﻿namespace _12_Login___Register_Form
 {
-    partial class Form1
+    partial class Login
     {
         /// <summary>
         /// Required designer variable.
@@ -55,11 +55,9 @@
             this.tbLoginPassword = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pbJenisKelamin = new System.Windows.Forms.PictureBox();
             this.gbRegister.SuspendLayout();
             this.gbLogin.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbJenisKelamin)).BeginInit();
             this.SuspendLayout();
             // 
@@ -93,6 +91,7 @@
             // 
             // listPosition
             // 
+            this.listPosition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.listPosition.Location = new System.Drawing.Point(133, 298);
             this.listPosition.Name = "listPosition";
             this.listPosition.Size = new System.Drawing.Size(259, 24);
@@ -140,7 +139,6 @@
             this.tbRegisterVerifyPassword.Name = "tbRegisterVerifyPassword";
             this.tbRegisterVerifyPassword.Size = new System.Drawing.Size(259, 22);
             this.tbRegisterVerifyPassword.TabIndex = 25;
-            this.tbRegisterVerifyPassword.UseSystemPasswordChar = true;
             // 
             // label8
             // 
@@ -173,7 +171,6 @@
             this.tbRegisterPassword.Name = "tbRegisterPassword";
             this.tbRegisterPassword.Size = new System.Drawing.Size(259, 22);
             this.tbRegisterPassword.TabIndex = 22;
-            this.tbRegisterPassword.UseSystemPasswordChar = true;
             // 
             // label7
             // 
@@ -331,16 +328,6 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "Username";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::_12_Login___Register_Form.Properties.Resources.WhatsApp_Image_2024_10_05_at_06_17_05;
-            this.pictureBox1.Location = new System.Drawing.Point(87, 40);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(190, 190);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
-            // 
             // pbJenisKelamin
             // 
             this.pbJenisKelamin.Image = global::_12_Login___Register_Form.Properties.Resources.user;
@@ -351,25 +338,23 @@
             this.pbJenisKelamin.TabIndex = 19;
             this.pbJenisKelamin.TabStop = false;
             // 
-            // Form1
+            // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(802, 423);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.gbLogin);
             this.Controls.Add(this.gbRegister);
             this.MaximumSize = new System.Drawing.Size(820, 470);
             this.MinimumSize = new System.Drawing.Size(300, 470);
-            this.Name = "Form1";
+            this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.gbRegister.ResumeLayout(false);
             this.gbRegister.PerformLayout();
             this.gbLogin.ResumeLayout(false);
             this.gbLogin.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbJenisKelamin)).EndInit();
             this.ResumeLayout(false);
 
@@ -405,7 +390,6 @@
         private System.Windows.Forms.TextBox tbRegisterPassword;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox listPosition;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

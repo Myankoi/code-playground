@@ -10,20 +10,20 @@ using System.Windows.Forms;
 
 namespace _12_Login___Register_Form
 {
-    public partial class Form1 : Form
+    public partial class Login : Form
     {
         UserRepository user = new UserRepository();
 
         private string jenisKelamin;
-        public Form1()
+        public Login()
         {
             InitializeComponent();
             this.Width = 300;
             gbRegister.Visible = false;
 
-            listPosition.Items.Add("Manager");
-            listPosition.Items.Add("Employee");
-            listPosition.Items.Add("Customer");
+            listPosition.Items.Add("Admin");
+            listPosition.Items.Add("Owner");
+            listPosition.Items.Add("Kasir");
         }
 
         private void btnRegister_Click(object sender, EventArgs e)
@@ -131,9 +131,26 @@ namespace _12_Login___Register_Form
 
             if (isValid)
             {
-                Form2 frm2 = new Form2(userPosition, this);
-                frm2.Show();
-                this.Hide();
+                MessageBox.Show($"Login Success! to {userPosition}", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                switch (userPosition)
+                {
+                    case "Admin" :
+                        Admin admin = new Admin(this);
+                        admin.Show();
+                        this.Hide();
+                        break;
+                    case "Owner" :
+                        Owner owner = new Owner(this);
+                        owner.Show();
+                        this.Hide();
+                        break;
+                    case "Kasir" :
+                        Kasir kasir = new Kasir(this);
+                        kasir.Show();
+                        this.Hide();
+                        break;
+                    
+                }
                 tbLoginUsername.Clear();
                 tbLoginPassword.Clear();
                 return;

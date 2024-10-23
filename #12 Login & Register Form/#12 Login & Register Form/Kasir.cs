@@ -10,29 +10,24 @@ using System.Windows.Forms;
 
 namespace _12_Login___Register_Form
 {
-    public partial class Form2 : Form
+    public partial class Kasir : Form
     {
-        Form1 frm1;
-        public Form2()
+        Login frm1;
+        public Kasir(Login form1)
         {
             InitializeComponent();
-        }
-
-        public Form2(string position, Form1 form1)
-        {
-            InitializeComponent();
-            sayHi.Text = $"Halo {position}";
             this.frm1 = form1;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Logout?", "Mau Logout?", MessageBoxButtons.YesNo);
-            if (result == DialogResult.Yes) 
-            { 
+            if (result == DialogResult.Yes)
+            {
                 this.Hide();
                 frm1.Show();
-            } else
+            }
+            else
             {
                 return;
             }

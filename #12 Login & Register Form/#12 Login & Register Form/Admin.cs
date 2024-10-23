@@ -1,0 +1,41 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace _12_Login___Register_Form
+{
+    public partial class Admin : Form
+    {
+        Login frm1;
+        public Admin()
+        {
+            InitializeComponent();
+        }
+
+        public Admin(Login form1)
+        {
+            InitializeComponent();
+            this.frm1 = form1;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Logout?", "Mau Logout?", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                this.Hide();
+                frm1.Show();
+            }
+            else
+            {
+                return;
+            }
+        }
+    }
+}
