@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -8,18 +10,31 @@ namespace _13_If_Else_Statement
 {
     internal class Program
     {
-        static int number;
+        static string username;
         static void Main(string[] args)
         {
             // Tugas Ramadian X RPL I ❤
-            Console.WriteLine("Program Menentukan Nilai Ganjil/Genap!");
-            number = int.Parse(Console.ReadLine());
-            numberChecker(number);
+            Console.WriteLine("Masukan username :");
+            username = Console.ReadLine();
+            sayHello(username);
 
             Console.ReadLine();
         }
 
-        static int numberChecker(int number) 
+        static void sayHello(string username)
+        {
+            if (username == "orangganteng")
+            {
+                Console.WriteLine("Selamat datang");
+            }
+
+            Console.WriteLine("lu gadiajak wlee");
+
+            string result = if (username == "aku") ? "" : ""
+        }
+
+
+        /*static int numberChecker(int number) 
         {
             if (number % 2 == 0 || number % 4 == 0 && number % 3 > 0 )
             {
@@ -34,6 +49,6 @@ namespace _13_If_Else_Statement
             {
                 return number;
             }
-        }
+        }*/
     }
 }
