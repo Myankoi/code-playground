@@ -29,9 +29,9 @@ namespace _12_Login___Register_Form
     }
     public class UserRepository
     {
-        private User[] users;
+        public User[] users;
         private int counter;
-        private int maxUsers = 100;
+        private int maxUsers = 3;
 
         public UserRepository()
         {
@@ -44,6 +44,10 @@ namespace _12_Login___Register_Form
             for (int i = 0; i < counter; i++) 
             {
                 if (users[i].Username == username || users[i] == null) 
+                {
+                    return false;
+                }
+                if (users[i].Position == position)
                 {
                     return false;
                 }
@@ -81,6 +85,15 @@ namespace _12_Login___Register_Form
             }
             
             return "tetot";
+        }
+
+        public bool isArrayFull()
+        {
+            if(users.Length > maxUsers)
+            {
+                return false;
+            }
+            return true;
         }
     }
 }

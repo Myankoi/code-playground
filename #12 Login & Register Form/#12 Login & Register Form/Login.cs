@@ -94,8 +94,14 @@ namespace _12_Login___Register_Form
             }
 
 
-            bool isValid = user.RegisterUser(tbRegisterUsername.Text, tbName.Text, jenisKelamin, tbEmail.Text, tbRegisterPassword.Text, tbHandphoneNumber.Text, listPosition.Text);
+            bool isFull = user.isArrayFull();
+            if (!isFull)
+            {
+                MessageBox.Show("Array is full, cannot insert new account!", "Registration Failed!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
+            bool isValid = user.RegisterUser(tbRegisterUsername.Text, tbName.Text, jenisKelamin, tbEmail.Text, tbRegisterPassword.Text, tbHandphoneNumber.Text, listPosition.Text);
             if (isValid)
             {
                 MessageBox.Show("Registration Success!", "Registration");
@@ -135,7 +141,7 @@ namespace _12_Login___Register_Form
                 switch (userPosition)
                 {
                     case "Admin" :
-                        Admin admin = new Admin(this);
+                        Admin admin = new Admin(this, user);
                         admin.Show();
                         this.Hide();
                         break;

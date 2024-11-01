@@ -46,7 +46,7 @@
             // 
             this.sayHi.AutoSize = true;
             this.sayHi.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sayHi.Location = new System.Drawing.Point(318, 179);
+            this.sayHi.Location = new System.Drawing.Point(12, 9);
             this.sayHi.Name = "sayHi";
             this.sayHi.Size = new System.Drawing.Size(102, 32);
             this.sayHi.TabIndex = 2;
