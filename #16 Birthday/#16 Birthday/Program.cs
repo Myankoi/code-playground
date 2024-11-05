@@ -23,7 +23,7 @@ namespace _16_Birthday
             Console.WriteLine($"Tanggal hari ini            : {nowDay}/{nowMonth}/{nowYear}\n");
             Console.Write("Masukan tanggal lahir kamu  : ");
             bool isTanggalInt = int.TryParse(Console.ReadLine(), out int tanggalLahir);
-            Console.Write("Masukan bulan lahir kamu    : \n");
+            Console.Write("Masukan bulan lahir kamu    : ");
             bool isBulanInt = int.TryParse(Console.ReadLine(), out int bulanLahir);
             validateBirthDay(isTanggalInt, isBulanInt, tanggalLahir, bulanLahir);
         }
