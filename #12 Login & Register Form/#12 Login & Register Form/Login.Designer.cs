@@ -40,6 +40,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.tbRegisterPassword = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.pbJenisKelamin = new System.Windows.Forms.PictureBox();
             this.rbFemale = new System.Windows.Forms.RadioButton();
             this.rbMale = new System.Windows.Forms.RadioButton();
             this.label5 = new System.Windows.Forms.Label();
@@ -55,10 +56,9 @@
             this.tbLoginPassword = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.pbJenisKelamin = new System.Windows.Forms.PictureBox();
             this.gbRegister.SuspendLayout();
-            this.gbLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbJenisKelamin)).BeginInit();
+            this.gbLogin.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbRegister
@@ -180,6 +180,16 @@
             this.label7.Size = new System.Drawing.Size(67, 16);
             this.label7.TabIndex = 21;
             this.label7.Text = "Password";
+            // 
+            // pbJenisKelamin
+            // 
+            this.pbJenisKelamin.Image = global::_12_Login___Register_Form.Properties.Resources.user;
+            this.pbJenisKelamin.Location = new System.Drawing.Point(311, 29);
+            this.pbJenisKelamin.Name = "pbJenisKelamin";
+            this.pbJenisKelamin.Size = new System.Drawing.Size(81, 112);
+            this.pbJenisKelamin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbJenisKelamin.TabIndex = 19;
+            this.pbJenisKelamin.TabStop = false;
             // 
             // rbFemale
             // 
@@ -328,16 +338,6 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "Username";
             // 
-            // pbJenisKelamin
-            // 
-            this.pbJenisKelamin.Image = global::_12_Login___Register_Form.Properties.Resources.user;
-            this.pbJenisKelamin.Location = new System.Drawing.Point(311, 29);
-            this.pbJenisKelamin.Name = "pbJenisKelamin";
-            this.pbJenisKelamin.Size = new System.Drawing.Size(81, 112);
-            this.pbJenisKelamin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbJenisKelamin.TabIndex = 19;
-            this.pbJenisKelamin.TabStop = false;
-            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -353,9 +353,9 @@
             this.Text = "Login";
             this.gbRegister.ResumeLayout(false);
             this.gbRegister.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbJenisKelamin)).EndInit();
             this.gbLogin.ResumeLayout(false);
             this.gbLogin.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbJenisKelamin)).EndInit();
             this.ResumeLayout(false);
 
         }

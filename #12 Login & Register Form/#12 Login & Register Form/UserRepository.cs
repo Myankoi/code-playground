@@ -8,6 +8,7 @@ namespace _12_Login___Register_Form
 {
     public class User
     {
+        public int Id { get; set; }
         public string Username { get; set; }
         public string Name { get; set; }
         public string Position { get; set; }
@@ -16,8 +17,9 @@ namespace _12_Login___Register_Form
         public string Password { get; set; }
         public string PhoneNumber { get; set; }
 
-        public User(string username, string name, string gender, string email, string password, string phoneNumber, string position)
+        public User(int id, string username, string name, string gender, string email, string password, string phoneNumber, string position)
         {
+            Id = id;
             Username = username;
             Name = name;
             Position = position;
@@ -30,6 +32,7 @@ namespace _12_Login___Register_Form
     public class UserRepository
     {
         public User[] users;
+        public List<User> usersList = new List<User>();
         private int counter;
         private int maxUsers = 3;
 
@@ -39,8 +42,8 @@ namespace _12_Login___Register_Form
             counter = 0;
         }
 
-        public bool RegisterUser(string username, string name, string gender, string email, string password, string phoneNumber, string position)
-        {
+        public bool RegisterUser(int id, string username, string name, string gender, string email, string password, string phoneNumber, string position)
+        {       
             for (int i = 0; i < counter; i++) 
             {
                 if (users[i].Username == username || users[i] == null) 
@@ -53,8 +56,9 @@ namespace _12_Login___Register_Form
                 }
             }
 
-            users[counter] = new User(username, name, gender, email, password, phoneNumber, position);
+            users[counter] = new User(id, username, name, gender, email, password, phoneNumber, position);
             counter++;
+            usersList.Add(users[counter - 1]);
             return true;
         }
 
@@ -89,7 +93,7 @@ namespace _12_Login___Register_Form
 
         public bool isArrayFull()
         {
-            if(users.Length > maxUsers)
+            if(users.Length >= maxUsers)
             {
                 return false;
             }

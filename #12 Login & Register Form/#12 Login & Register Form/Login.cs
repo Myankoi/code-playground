@@ -15,6 +15,7 @@ namespace _12_Login___Register_Form
         UserRepository user = new UserRepository();
 
         private string jenisKelamin;
+        int id;
         public Login()
         {
             InitializeComponent();
@@ -25,7 +26,7 @@ namespace _12_Login___Register_Form
             listPosition.Items.Add("Owner");
             listPosition.Items.Add("Kasir");
         }
-
+            
         private void btnRegister_Click(object sender, EventArgs e)
         {
             if (!gbRegister.Visible)
@@ -95,13 +96,13 @@ namespace _12_Login___Register_Form
 
 
             bool isFull = user.isArrayFull();
-            if (!isFull)
+            if (isFull)
             {
                 MessageBox.Show("Array is full, cannot insert new account!", "Registration Failed!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            bool isValid = user.RegisterUser(tbRegisterUsername.Text, tbName.Text, jenisKelamin, tbEmail.Text, tbRegisterPassword.Text, tbHandphoneNumber.Text, listPosition.Text);
+            bool isValid = user.RegisterUser(id++, tbRegisterUsername.Text, tbName.Text, jenisKelamin, tbEmail.Text, tbRegisterPassword.Text, tbHandphoneNumber.Text, listPosition.Text);
             if (isValid)
             {
                 MessageBox.Show("Registration Success!", "Registration");
@@ -117,6 +118,7 @@ namespace _12_Login___Register_Form
                 listPosition.SelectedIndex = 2;
                 gbRegister.Visible = false;
                 this.Width = 300;
+                user.usersList.Add(user.users.Last());
                 return;
             } else
             {
@@ -141,7 +143,7 @@ namespace _12_Login___Register_Form
                 switch (userPosition)
                 {
                     case "Admin" :
-                        Admin admin = new Admin(this, user);
+                        Admin admin = new Admin(this, user.usersList);
                         admin.Show();
                         this.Hide();
                         break;
