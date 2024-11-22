@@ -30,6 +30,7 @@
         {
             this.button1 = new System.Windows.Forms.Button();
             this.sayHi = new System.Windows.Forms.Label();
+            this.lblIdentity = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -52,11 +53,21 @@
             this.sayHi.TabIndex = 4;
             this.sayHi.Text = "Kasir";
             // 
+            // lblIdentity
+            // 
+            this.lblIdentity.AutoSize = true;
+            this.lblIdentity.Location = new System.Drawing.Point(388, 217);
+            this.lblIdentity.Name = "lblIdentity";
+            this.lblIdentity.Size = new System.Drawing.Size(24, 16);
+            this.lblIdentity.TabIndex = 19;
+            this.lblIdentity.Text = "aw";
+            // 
             // Kasir
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblIdentity);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.sayHi);
             this.Name = "Kasir";
@@ -70,5 +81,6 @@
 
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label sayHi;
+        private System.Windows.Forms.Label lblIdentity;
     }
 }

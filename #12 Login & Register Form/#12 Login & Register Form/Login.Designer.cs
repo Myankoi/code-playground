@@ -56,6 +56,7 @@
             this.tbLoginPassword = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.lblIdentity = new System.Windows.Forms.Label();
             this.gbRegister.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbJenisKelamin)).BeginInit();
             this.gbLogin.SuspendLayout();
@@ -82,9 +83,9 @@
             this.gbRegister.Controls.Add(this.label4);
             this.gbRegister.Controls.Add(this.tbName);
             this.gbRegister.Controls.Add(this.label3);
-            this.gbRegister.Location = new System.Drawing.Point(372, 40);
+            this.gbRegister.Location = new System.Drawing.Point(372, 12);
             this.gbRegister.Name = "gbRegister";
-            this.gbRegister.Size = new System.Drawing.Size(418, 371);
+            this.gbRegister.Size = new System.Drawing.Size(418, 399);
             this.gbRegister.TabIndex = 1;
             this.gbRegister.TabStop = false;
             this.gbRegister.Text = "Registrasi User";
@@ -95,15 +96,15 @@
             this.listPosition.Location = new System.Drawing.Point(133, 298);
             this.listPosition.Name = "listPosition";
             this.listPosition.Size = new System.Drawing.Size(259, 24);
-            this.listPosition.TabIndex = 32;
+            this.listPosition.TabIndex = 13;
             // 
             // btnSubmit
             // 
             this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSubmit.Location = new System.Drawing.Point(299, 332);
+            this.btnSubmit.Location = new System.Drawing.Point(299, 351);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(93, 28);
-            this.btnSubmit.TabIndex = 12;
+            this.btnSubmit.TabIndex = 14;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = true;
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
@@ -122,7 +123,7 @@
             this.tbHandphoneNumber.Location = new System.Drawing.Point(133, 270);
             this.tbHandphoneNumber.Name = "tbHandphoneNumber";
             this.tbHandphoneNumber.Size = new System.Drawing.Size(259, 22);
-            this.tbHandphoneNumber.TabIndex = 27;
+            this.tbHandphoneNumber.TabIndex = 12;
             // 
             // label9
             // 
@@ -138,7 +139,7 @@
             this.tbRegisterVerifyPassword.Location = new System.Drawing.Point(133, 242);
             this.tbRegisterVerifyPassword.Name = "tbRegisterVerifyPassword";
             this.tbRegisterVerifyPassword.Size = new System.Drawing.Size(259, 22);
-            this.tbRegisterVerifyPassword.TabIndex = 25;
+            this.tbRegisterVerifyPassword.TabIndex = 11;
             // 
             // label8
             // 
@@ -154,7 +155,7 @@
             this.tbEmail.Location = new System.Drawing.Point(133, 186);
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.Size = new System.Drawing.Size(259, 22);
-            this.tbEmail.TabIndex = 23;
+            this.tbEmail.TabIndex = 9;
             // 
             // label6
             // 
@@ -170,7 +171,7 @@
             this.tbRegisterPassword.Location = new System.Drawing.Point(133, 214);
             this.tbRegisterPassword.Name = "tbRegisterPassword";
             this.tbRegisterPassword.Size = new System.Drawing.Size(259, 22);
-            this.tbRegisterPassword.TabIndex = 22;
+            this.tbRegisterPassword.TabIndex = 10;
             // 
             // label7
             // 
@@ -197,7 +198,7 @@
             this.rbFemale.Location = new System.Drawing.Point(133, 121);
             this.rbFemale.Name = "rbFemale";
             this.rbFemale.Size = new System.Drawing.Size(98, 20);
-            this.rbFemale.TabIndex = 18;
+            this.rbFemale.TabIndex = 8;
             this.rbFemale.TabStop = true;
             this.rbFemale.Text = "Perempuan";
             this.rbFemale.UseVisualStyleBackColor = true;
@@ -209,7 +210,7 @@
             this.rbMale.Location = new System.Drawing.Point(133, 95);
             this.rbMale.Name = "rbMale";
             this.rbMale.Size = new System.Drawing.Size(82, 20);
-            this.rbMale.TabIndex = 17;
+            this.rbMale.TabIndex = 7;
             this.rbMale.TabStop = true;
             this.rbMale.Text = "Laki-Laki";
             this.rbMale.UseVisualStyleBackColor = true;
@@ -229,7 +230,7 @@
             this.tbRegisterUsername.Location = new System.Drawing.Point(133, 29);
             this.tbRegisterUsername.Name = "tbRegisterUsername";
             this.tbRegisterUsername.Size = new System.Drawing.Size(172, 22);
-            this.tbRegisterUsername.TabIndex = 15;
+            this.tbRegisterUsername.TabIndex = 5;
             // 
             // label4
             // 
@@ -245,7 +246,7 @@
             this.tbName.Location = new System.Drawing.Point(133, 57);
             this.tbName.Name = "tbName";
             this.tbName.Size = new System.Drawing.Size(172, 22);
-            this.tbName.TabIndex = 14;
+            this.tbName.TabIndex = 6;
             // 
             // label3
             // 
@@ -265,9 +266,9 @@
             this.gbLogin.Controls.Add(this.tbLoginPassword);
             this.gbLogin.Controls.Add(this.label2);
             this.gbLogin.Controls.Add(this.label1);
-            this.gbLogin.Location = new System.Drawing.Point(12, 249);
+            this.gbLogin.Location = new System.Drawing.Point(12, 221);
             this.gbLogin.Name = "gbLogin";
-            this.gbLogin.Size = new System.Drawing.Size(350, 162);
+            this.gbLogin.Size = new System.Drawing.Size(350, 190);
             this.gbLogin.TabIndex = 2;
             this.gbLogin.TabStop = false;
             this.gbLogin.Text = "Login";
@@ -275,10 +276,10 @@
             // btnRegister
             // 
             this.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegister.Location = new System.Drawing.Point(203, 123);
+            this.btnRegister.Location = new System.Drawing.Point(203, 142);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(93, 28);
-            this.btnRegister.TabIndex = 11;
+            this.btnRegister.TabIndex = 4;
             this.btnRegister.Text = "Register";
             this.btnRegister.UseVisualStyleBackColor = true;
             this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
@@ -286,10 +287,10 @@
             // btnLogin
             // 
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogin.Location = new System.Drawing.Point(99, 123);
+            this.btnLogin.Location = new System.Drawing.Point(99, 142);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(85, 28);
-            this.btnLogin.TabIndex = 10;
+            this.btnLogin.TabIndex = 3;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
@@ -297,7 +298,7 @@
             // cbShowPassword
             // 
             this.cbShowPassword.AutoSize = true;
-            this.cbShowPassword.Location = new System.Drawing.Point(99, 87);
+            this.cbShowPassword.Location = new System.Drawing.Point(99, 104);
             this.cbShowPassword.Name = "cbShowPassword";
             this.cbShowPassword.Size = new System.Drawing.Size(125, 20);
             this.cbShowPassword.TabIndex = 9;
@@ -310,20 +311,20 @@
             this.tbLoginUsername.Location = new System.Drawing.Point(99, 31);
             this.tbLoginUsername.Name = "tbLoginUsername";
             this.tbLoginUsername.Size = new System.Drawing.Size(226, 22);
-            this.tbLoginUsername.TabIndex = 8;
+            this.tbLoginUsername.TabIndex = 1;
             // 
             // tbLoginPassword
             // 
-            this.tbLoginPassword.Location = new System.Drawing.Point(99, 59);
+            this.tbLoginPassword.Location = new System.Drawing.Point(99, 67);
             this.tbLoginPassword.Name = "tbLoginPassword";
             this.tbLoginPassword.Size = new System.Drawing.Size(226, 22);
-            this.tbLoginPassword.TabIndex = 7;
+            this.tbLoginPassword.TabIndex = 2;
             this.tbLoginPassword.UseSystemPasswordChar = true;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(26, 62);
+            this.label2.Location = new System.Drawing.Point(26, 70);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(67, 16);
             this.label2.TabIndex = 6;
@@ -338,12 +339,22 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "Username";
             // 
+            // lblIdentity
+            // 
+            this.lblIdentity.AutoSize = true;
+            this.lblIdentity.Location = new System.Drawing.Point(12, 12);
+            this.lblIdentity.Name = "lblIdentity";
+            this.lblIdentity.Size = new System.Drawing.Size(24, 16);
+            this.lblIdentity.TabIndex = 12;
+            this.lblIdentity.Text = "aw";
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(802, 423);
+            this.Controls.Add(this.lblIdentity);
             this.Controls.Add(this.gbLogin);
             this.Controls.Add(this.gbRegister);
             this.MaximumSize = new System.Drawing.Size(820, 470);
@@ -357,6 +368,7 @@
             this.gbLogin.ResumeLayout(false);
             this.gbLogin.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -390,6 +402,7 @@
         private System.Windows.Forms.TextBox tbRegisterPassword;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox listPosition;
+        private System.Windows.Forms.Label lblIdentity;
     }
 }
 

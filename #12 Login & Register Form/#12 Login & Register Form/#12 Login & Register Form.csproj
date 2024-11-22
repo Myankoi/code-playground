@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Identity.cs" />
     <Compile Include="Kasir.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,6 +74,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserRepository.cs" />
+    <Compile Include="Utils.cs" />
     <EmbeddedResource Include="Kasir.resx">
       <DependentUpon>Kasir.cs</DependentUpon>
     </EmbeddedResource>

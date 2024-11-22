@@ -57,8 +57,8 @@ namespace _12_Login___Register_Form
             }
 
             users[counter] = new User(id, username, name, gender, email, password, phoneNumber, position);
+            usersList.Add(users[counter]);
             counter++;
-            usersList.Add(users[counter - 1]);
             return true;
         }
 
@@ -93,11 +93,7 @@ namespace _12_Login___Register_Form
 
         public bool isArrayFull()
         {
-            if(users.Length >= maxUsers)
-            {
-                return false;
-            }
-            return true;
+            return counter >= maxUsers;
         }
     }
 }

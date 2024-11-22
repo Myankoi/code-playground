@@ -14,13 +14,17 @@ namespace _12_Login___Register_Form
     {
         Login login;
         List<User> usersList;
-        int id;
+        Utils utils;
+        int id = 0;
 
-        public Admin(Login loginForm, List<User> usersList)
+        public Admin(Login loginForm, Identity identity, List<User> usersList)
         {
             InitializeComponent();
+            utils = new Utils();
             this.login = loginForm;
             this.usersList = usersList;
+            gbUserInformation.Enabled = false;
+            lblIdentity.Text = identity.getIdentity();
             LoadUsers();
         }
 
@@ -64,11 +68,11 @@ namespace _12_Login___Register_Form
             id = int.Parse(dgvUsers.CurrentRow.Cells[0].Value.ToString());
             tbUsername.Text = dgvUsers.CurrentRow.Cells[1].Value.ToString();
             tbName.Text = dgvUsers.CurrentRow.Cells[2].Value.ToString();
-            tbPosition.Text = dgvUsers.CurrentRow.Cells[3].Value.ToString();
             tbGender.Text = dgvUsers.CurrentRow.Cells[4].Value.ToString();
             tbEmail.Text = dgvUsers.CurrentRow.Cells[5].Value.ToString();
             tbPassword.Text = dgvUsers.CurrentRow.Cells[6].Value.ToString();
             tbPhone.Text = dgvUsers.CurrentRow.Cells[7].Value.ToString();
+            gbUserInformation.Enabled = true;
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -79,10 +83,12 @@ namespace _12_Login___Register_Form
             {
                 currentUser.Username = tbUsername.Text;
                 currentUser.Name = tbName.Text;
-                currentUser.Position = tbPosition.Text;
                 currentUser.Gender = tbGender.Text;
                 currentUser.Email = tbEmail.Text;
                 currentUser.PhoneNumber = tbPhone.Text;
+                MessageBox.Show("User data is updated!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                utils.ClearAllTextBoxes(this);
+                gbUserInformation.Enabled = false;
                 LoadUsers();
             }
         }

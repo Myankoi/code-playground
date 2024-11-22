@@ -13,10 +13,12 @@ namespace _12_Login___Register_Form
     public partial class Kasir : Form
     {
         Login frm1;
-        public Kasir(Login form1)
+        public Kasir(Login form1, Identity identity)
         {
             InitializeComponent();
             this.frm1 = form1;
+            lblIdentity.Text = identity.getIdentity();
+
         }
 
         private void button1_Click(object sender, EventArgs e)

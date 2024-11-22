@@ -13,27 +13,31 @@ namespace _12_Login___Register_Form
     public partial class Login : Form
     {
         UserRepository user = new UserRepository();
+        Identity identity = new Identity();
+        Utils utils = new Utils();
 
         private string jenisKelamin;
-        int id;
+        int id = 0;
         public Login()
         {
             InitializeComponent();
             this.Width = 300;
+            lblIdentity.Text = identity.getIdentity();
             gbRegister.Visible = false;
 
             listPosition.Items.Add("Admin");
             listPosition.Items.Add("Owner");
             listPosition.Items.Add("Kasir");
         }
-            
+
         private void btnRegister_Click(object sender, EventArgs e)
         {
             if (!gbRegister.Visible)
             {
                 gbRegister.Visible = true;
                 this.Width = 620;
-            } else
+            }
+            else
             {
                 gbRegister.Visible = false;
                 this.Width = 300;
@@ -46,8 +50,8 @@ namespace _12_Login___Register_Form
             {
                 tbLoginPassword.UseSystemPasswordChar = false;
             }
-            else 
-            { 
+            else
+            {
                 tbLoginPassword.UseSystemPasswordChar = true;
             }
         }
@@ -66,12 +70,11 @@ namespace _12_Login___Register_Form
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            //validasi
-            if (IsEmpty(tbRegisterUsername, "Username") ||
-                IsEmpty(tbName, "Your Name") ||
-                IsEmpty(tbRegisterPassword, "Password") ||
-                IsEmpty(tbEmail, "Email") ||
-                IsEmpty(tbHandphoneNumber, "Phone Number"))
+            if (utils.IsEmpty(tbRegisterUsername, "Username") ||
+                utils.IsEmpty(tbName, "Your Name") ||
+                utils.IsEmpty(tbRegisterPassword, "Password") ||
+                utils.IsEmpty(tbEmail, "Email") ||
+                utils.IsEmpty(tbHandphoneNumber, "Phone Number"))
             {
                 return;
             }
@@ -106,21 +109,17 @@ namespace _12_Login___Register_Form
             if (isValid)
             {
                 MessageBox.Show("Registration Success!", "Registration");
-                tbRegisterUsername.Clear();
-                tbName.Clear();
+                user.usersList.Add(user.users.Last());
+
                 rbMale.Checked = false;
                 rbFemale.Checked = false;
-                tbRegisterPassword.Clear();
-                tbEmail.Clear();
-                tbRegisterPassword.Clear();
-                tbRegisterVerifyPassword.Clear();
-                tbHandphoneNumber.Clear();
+                utils.ClearAllTextBoxes(this);
                 listPosition.SelectedIndex = 2;
                 gbRegister.Visible = false;
                 this.Width = 300;
-                user.usersList.Add(user.users.Last());
                 return;
-            } else
+            }
+            else
             {
                 MessageBox.Show("Username Is Taken!", "Registration");
                 return;
@@ -128,7 +127,7 @@ namespace _12_Login___Register_Form
         }
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (tbLoginUsername.Text == string.Empty ||  tbLoginPassword.Text == string.Empty)
+            if (tbLoginUsername.Text == string.Empty || tbLoginPassword.Text == string.Empty)
             {
                 MessageBox.Show("Jangan Kosong woi!");
                 return;
@@ -139,44 +138,35 @@ namespace _12_Login___Register_Form
 
             if (isValid)
             {
-                MessageBox.Show($"Login Success! to {userPosition}", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show($"Login Success! to {userPosition} Form", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 switch (userPosition)
                 {
-                    case "Admin" :
-                        Admin admin = new Admin(this, user.usersList);
+                    case "Admin":
+                        Admin admin = new Admin(this, identity, user.usersList);
                         admin.Show();
                         this.Hide();
                         break;
-                    case "Owner" :
-                        Owner owner = new Owner(this);
+                    case "Owner":
+                        Owner owner = new Owner(this, identity);
                         owner.Show();
                         this.Hide();
                         break;
-                    case "Kasir" :
-                        Kasir kasir = new Kasir(this);
+                    case "Kasir":
+                        Kasir kasir = new Kasir(this, identity);
                         kasir.Show();
                         this.Hide();
                         break;
-                    
+
                 }
                 tbLoginUsername.Clear();
                 tbLoginPassword.Clear();
                 return;
-            } else
+            }
+            else
             {
                 MessageBox.Show("Salah woi!");
             }
             return;
         }
-        private bool IsEmpty(TextBox tb, string fieldName)
-        {
-            if (tb.Text == string.Empty)
-            {
-                MessageBox.Show($"Please Insert {fieldName}!");
-                return true;
-            }
-            return false;
-        }
-
     }
 }
