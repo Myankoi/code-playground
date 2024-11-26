@@ -40,6 +40,7 @@
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbUserInformation = new System.Windows.Forms.GroupBox();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.tbPhone = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -54,6 +55,7 @@
             this.tbUsername = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblIdentity = new System.Windows.Forms.Label();
+            this.btnAddData = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).BeginInit();
             this.gbUserInformation.SuspendLayout();
             this.SuspendLayout();
@@ -152,6 +154,7 @@
             // 
             // gbUserInformation
             // 
+            this.gbUserInformation.Controls.Add(this.btnDelete);
             this.gbUserInformation.Controls.Add(this.btnUpdate);
             this.gbUserInformation.Controls.Add(this.tbPhone);
             this.gbUserInformation.Controls.Add(this.label5);
@@ -172,9 +175,21 @@
             this.gbUserInformation.TabStop = false;
             this.gbUserInformation.Text = "Information";
             // 
+            // btnDelete
+            // 
+            this.btnDelete.BackColor = System.Drawing.Color.Red;
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.Location = new System.Drawing.Point(580, 131);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(75, 32);
+            this.btnDelete.TabIndex = 31;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(661, 134);
+            this.btnUpdate.Location = new System.Drawing.Point(661, 131);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(75, 32);
             this.btnUpdate.TabIndex = 18;
@@ -287,11 +302,22 @@
             this.lblIdentity.TabIndex = 18;
             this.lblIdentity.Text = "aw";
             // 
+            // btnAddData
+            // 
+            this.btnAddData.Location = new System.Drawing.Point(673, 71);
+            this.btnAddData.Name = "btnAddData";
+            this.btnAddData.Size = new System.Drawing.Size(115, 32);
+            this.btnAddData.TabIndex = 32;
+            this.btnAddData.Text = "Add Data";
+            this.btnAddData.UseVisualStyleBackColor = true;
+            this.btnAddData.Click += new System.EventHandler(this.btnAddData_Click);
+            // 
             // Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 489);
+            this.Controls.Add(this.btnAddData);
             this.Controls.Add(this.lblIdentity);
             this.Controls.Add(this.gbUserInformation);
             this.Controls.Add(this.dgvUsers);
@@ -336,5 +362,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.Label lblIdentity;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnAddData;
     }
 }

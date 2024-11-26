@@ -12,12 +12,12 @@ namespace _12_Login___Register_Form
 {
     public partial class Login : Form
     {
-        UserRepository user = new UserRepository();
+        public UserRepository user = new UserRepository();
         Identity identity = new Identity();
         Utils utils = new Utils();
+        int id = -1;
 
         private string jenisKelamin;
-        int id = 0;
         public Login()
         {
             InitializeComponent();
@@ -109,12 +109,11 @@ namespace _12_Login___Register_Form
             if (isValid)
             {
                 MessageBox.Show("Registration Success!", "Registration");
-                user.usersList.Add(user.users.Last());
 
                 rbMale.Checked = false;
                 rbFemale.Checked = false;
                 utils.ClearAllTextBoxes(this);
-                listPosition.SelectedIndex = 2;
+                listPosition.SelectedIndex = (listPosition.SelectedIndex == 1) ? +1 : -1;
                 gbRegister.Visible = false;
                 this.Width = 300;
                 return;
@@ -142,7 +141,7 @@ namespace _12_Login___Register_Form
                 switch (userPosition)
                 {
                     case "Admin":
-                        Admin admin = new Admin(this, identity, user.usersList);
+                        Admin admin = new Admin(this, identity);
                         admin.Show();
                         this.Hide();
                         break;

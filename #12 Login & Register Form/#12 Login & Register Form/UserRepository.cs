@@ -33,7 +33,7 @@ namespace _12_Login___Register_Form
     {
         public User[] users;
         public List<User> usersList = new List<User>();
-        private int counter;
+        public int counter;
         private int maxUsers = 3;
 
         public UserRepository()
@@ -46,7 +46,7 @@ namespace _12_Login___Register_Form
         {       
             for (int i = 0; i < counter; i++) 
             {
-                if (users[i].Username == username || users[i] == null) 
+                if (users[i] == null || users[i].Username == username)
                 {
                     return false;
                 }
@@ -82,10 +82,11 @@ namespace _12_Login___Register_Form
         {
             for (int i = 0; i < counter; i++)
             {
-                if (users[i].Username == username && users[i].Password == password)
+                if (users[i] != null && users[i].Username == username && users[i].Password == password)
                 {
                     return users[i].Position;
                 }
+
             }
             
             return "tetot";

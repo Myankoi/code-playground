@@ -13,18 +13,24 @@ namespace _12_Login___Register_Form
     public partial class Admin : Form
     {
         Login login;
+        UserRepository repository;
         List<User> usersList;
+        User[] usersArray;
         Utils utils;
-        int id = 0;
+        string id;
 
-        public Admin(Login loginForm, Identity identity, List<User> usersList)
+        public Admin(Login loginForm, Identity identity)
         {
             InitializeComponent();
             utils = new Utils();
             this.login = loginForm;
-            this.usersList = usersList;
+            this.repository = loginForm.user;
+            this.usersList = loginForm.user.usersList;
+            this.usersArray = loginForm.user.users;
+
             gbUserInformation.Enabled = false;
             lblIdentity.Text = identity.getIdentity();
+
             LoadUsers();
         }
 
@@ -65,7 +71,7 @@ namespace _12_Login___Register_Form
 
         private void dgvUsers_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            id = int.Parse(dgvUsers.CurrentRow.Cells[0].Value.ToString());
+            id = dgvUsers.CurrentRow.Cells[0].Value.ToString();
             tbUsername.Text = dgvUsers.CurrentRow.Cells[1].Value.ToString();
             tbName.Text = dgvUsers.CurrentRow.Cells[2].Value.ToString();
             tbGender.Text = dgvUsers.CurrentRow.Cells[4].Value.ToString();
@@ -75,9 +81,15 @@ namespace _12_Login___Register_Form
             gbUserInformation.Enabled = true;
         }
 
+        private void btnAddData_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            login.Show();
+        }
+
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            var currentUser = usersList.FirstOrDefault(x => x.Id == id);
+            var currentUser = usersList.Find(x => x.Id.ToString() == id);
 
             if (currentUser != null)
             {
@@ -85,6 +97,7 @@ namespace _12_Login___Register_Form
                 currentUser.Name = tbName.Text;
                 currentUser.Gender = tbGender.Text;
                 currentUser.Email = tbEmail.Text;
+                currentUser.Password = tbPassword.Text;
                 currentUser.PhoneNumber = tbPhone.Text;
                 MessageBox.Show("User data is updated!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 utils.ClearAllTextBoxes(this);
@@ -92,5 +105,36 @@ namespace _12_Login___Register_Form
                 LoadUsers();
             }
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Are you sure want to delete this user?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                var deleteUserList = usersList.Find(x => x.Id.ToString() == id);
+
+                if (deleteUserList != null)
+                {
+                    usersList.Remove(deleteUserList);
+
+                    // arraynya di replace pake data dari list, terus counter di repo disesuain ama banyak data di list
+                    Array.Clear(usersArray, 0, usersArray.Length);
+                    int i = 0;
+                    foreach (var user in usersList)
+                    {
+                        usersArray[i] = user;
+                        i++;
+                    }
+
+                    repository.counter = usersList.Count();
+                    LoadUsers();
+                }
+            } else
+            {
+                return;
+            }
+        }
+
+        
     }
 }
