@@ -10,15 +10,104 @@ namespace _18_Looping
     {
         static void Main(string[] args)
         {
-            While();
-            Console.ReadLine();
-            DoWhile();
-            Console.ReadLine();
-            For();
-            Console.ReadLine();
-            ForEach();
+            Console.WriteLine("Muhammad Ramadian Ramadhan");
+            Console.WriteLine("X RPL I\n");
+            Console.WriteLine("Pilih program berikut: ");
+            Console.WriteLine("1. Ascending");
+            Console.WriteLine("2. Descending");
+            Console.Write("Choice: ");
+            if (int.TryParse(Console.ReadLine(), out int choice))
+            {
+                if (choice == 1)
+                {
+                    Ascending();
+                } else if (choice == 2)
+                {
+                    Descending();
+                } else
+                {
+                    Console.Write("Ngulang Klik Enter");
+                    Console.Read();
+                    Console.Clear();
+                    Main(args);
+                }
+            }
             Console.ReadLine();
         }
+
+        static void Ascending()
+        {
+            // Muhammad Ramadian Ramadhan
+            // X RPL I
+            int tinggi;
+            Console.Write("Masukan tinggi segitiga: ");
+
+            if (int.TryParse(Console.ReadLine(), out tinggi))
+            {
+                int formattedTinggi = Math.Abs(tinggi);
+
+                for (int i = 0; i <= formattedTinggi; i++)
+                {
+                    for (int o = 0; o < i; o++)
+                    {
+                        Console.Write(i);
+                    }
+                    Console.WriteLine();
+                }
+            }
+            else
+            {
+                Console.Write("Ngulang Klik Enter");
+                Console.Read();
+                Console.Clear();
+                Ascending();
+            }
+        }
+
+        static void Descending()
+        {
+            // Muhammad Ramadian Ramadhan
+            // X RPL I
+            int tinggi;
+            Console.Write("Masukan tinggi segitiga: ");
+
+            if (int.TryParse(Console.ReadLine(), out tinggi))
+            {
+                int formattedTinggi = Math.Abs(tinggi);
+                for (int i = 1; i <= formattedTinggi; i++)
+                {
+                    for (int o = formattedTinggi; o >= i; o--)
+                    {
+                        Console.Write(i);
+                    }
+                    Console.WriteLine();
+                }
+            }
+            else
+            {
+                Console.Write("Ngulang Klik Enter");
+                Console.Read();
+                Descending();
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         static void While()
         {
@@ -45,6 +134,10 @@ namespace _18_Looping
             for(int x = 0; x < 5; x++)
             {
                 Console.WriteLine(x);
+                if ( x == 2 )
+                {
+                    break;
+                }
             }
         }
         static void ForEach()
