@@ -29,10 +29,27 @@ namespace _12_Login___Register_Form
             PhoneNumber = phoneNumber;
         }
     }
+
+    public class Member
+    {
+        public string Id  { get; set; }
+        public string Username { get; set; }
+        public string Address { get; set; }
+        public string PhoneNumber { get; set; }
+
+        public Member(string id, string username, string address, string phoneNumber)
+        {
+            Id = id;
+            Username = username;
+            Address = address;
+            PhoneNumber = phoneNumber;
+        }
+    }
     public class UserRepository
     {
         public User[] users;
         public List<User> usersList = new List<User>();
+        public List<Member> memberList = new List<Member>();
         public int counter;
         private int maxUsers = 3;
 

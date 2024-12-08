@@ -71,6 +71,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.sayHi);
             this.Name = "Owner";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Manager";
             this.ResumeLayout(false);
             this.PerformLayout();

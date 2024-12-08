@@ -15,7 +15,7 @@ namespace _12_Login___Register_Form
         public UserRepository user = new UserRepository();
         Identity identity = new Identity();
         Utils utils = new Utils();
-        int id = -1;
+        int id = 0;
 
         private string jenisKelamin;
         public Login()
